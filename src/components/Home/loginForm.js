@@ -28,12 +28,22 @@ class LoginForm extends Component{
   
   render(){
     return(
-      <form onSubmit={this.handleLoginSubmit}>
-        <label>email</label>
-        <input onChange={this.handleEmailInput} value={this.state.email}/>
-        <label>password</label>
-        <input onChange={this.handlePasswordInput} value={this.state.password}/>
-        <button>submit</button>
+      <form id="login-form" onSubmit={this.handleLoginSubmit}>
+        <input
+          className="login-create-form-input"
+          onChange={this.handleEmailInput}
+          type="email" 
+          value={this.state.email}
+          placeholder="Email"
+        /><br/>
+        <input
+          className="login-create-form-input"
+          onChange={this.handlePasswordInput} 
+          type="password"
+          value={this.state.password}
+          placeholder="Password"
+        /><br/>
+        <button id="login-button" className="btn btn-primary">Log In</button>
       </form>
     )
   }

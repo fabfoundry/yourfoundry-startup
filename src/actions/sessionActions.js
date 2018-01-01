@@ -5,6 +5,10 @@ export function loginSuccess() {
   return {type: types.LOG_IN_SUCCESS}
 }
 
+export function logoutSuccess() {
+  return {type: types.LOG_OUT_SUCCESS}
+}
+
 export function logInUser(credentials) {  
   return function(dispatch) {
     return sessionAdapter.login(credentials)
@@ -15,4 +19,11 @@ export function logInUser(credentials) {
       throw(error);
     });
   };
+}
+
+export function logOutUser() {
+  return function(dispatch) {
+    sessionStorage.removeItem('jwt')
+    dispatch(logoutSuccess())
+  }
 }
