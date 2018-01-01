@@ -5,7 +5,6 @@ import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import thunk from 'redux-thunk'
 import reducers from './reducers';
-import registerServiceWorker from './registerServiceWorker';
 
 // Containers
 import Home from './containers/Home';

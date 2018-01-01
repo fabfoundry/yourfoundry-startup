@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import LoginForm from '../components/Home/loginForm';
 
 class Home extends Component{
+  
   render(){
     return(
-      <div>Home</div>
+      <LoginForm/>
     )
   }
 }
 
-export default Home
+export default Home;
