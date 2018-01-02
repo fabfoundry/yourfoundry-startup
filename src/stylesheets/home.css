@@ -40,9 +40,9 @@ body {
 
 .nav-button {
   margin: 7px;
-  width: 100px;
-  height: 40px;
-  font-size: 17px;
+  width: 11vh;
+  height: 4vh;
+  font-size: 1.7vh;
   border-radius: 8px;
 }
 
@@ -56,6 +56,7 @@ body {
 
 #home-content {
   height: 100%;
+  background: black;
 }
 
 #home-content-container {
@@ -64,6 +65,108 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+#home-main-header {
+  height: 30%;
+  text-align: center;
+  margin: 1%;
+}
+
+#main-header {
+  background: rgba(0, 0, 0, .6);
+  height: 50%;
+  width: 70%;
+  position: relative;
+  top: 50%;
+  left: 15%;
+  right: 15%;
+}
+
+#main-header-text {
+  color: white;
+  font-size: 2.0vw;
+  font-weight: 500;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 3%;
+}
+
+#home-main-description {
+  height: 20%;
+  text-align: center;
+  margin: 1%;
+}
+
+#main-description {
+  background: rgba(0, 0, 0, .6);
+  height: 100%;
+  width: 60%;
+  position: relative;
+  left: 20%;
+  right: 20%;
+}
+
+#main-description-text {
+  color: white;
+  font-size: 1.3vw;
+  font-weight: 300;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 3%;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+#home-main-login-signup {
+  height: 10%;
+  text-align: center;
+}
+
+#login-signup-buttons {
+  height: 100%;
+  width: 100%;
+}
+
+#login-signup-buttons .nav-button {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ---------------------------------------------------------- */
+
+#home-main-fabfoundry-link {
+  height: 10%;
+  text-align: center;
+  margin: 1%;
+}
+
+#main-fabfoundry-link {
+  background: rgba(0, 0, 0, .6);
+  height: 100%;
+  width: 60%;
+  position: relative;
+  left: 20%;
+  right: 20%;
+}
+
+#main-fabfoundry-link-text {
+  color: white;
+  font-size: 1.3vw;
+  font-weight: 300;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 3%;
+}
+
+#main-fabfoundry-link-text .underline{
+  text-decoration: underline;
 }
 
 /*#auth-forms-container {
