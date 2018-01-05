@@ -1,0 +1,21 @@
+#navbar-container {
+  padding: 0;
+  background: black;
+}
+
+#navbar {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.collapsed-nav-container {
+  text-align: center;
+}
+
+.navbar {
+  background-color: black!important;
+}
+
+.navbar-logo {
+  font-size: 25px;
+}
