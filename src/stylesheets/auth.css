@@ -1,0 +1,128 @@
+.auth-page {
+  height: 95%;
+  background: black;
+  overflow: auto;
+}
+
+.auth-form-container {
+  height: 100%;
+}
+
+.auth-form-title {
+  height: 10%;
+  color: white;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.auth-form-title > p {
+  font-size: 25px;
+  height: 25%;
+  width: 100%;
+  position: relative;
+  top: 30%;
+  transform: translateY(-50%);
+}
+
+.auth-form {
+  color: white;
+  width: 100%;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 17px;
+  font-weight: 200;
+}
+
+.auth-form > input {
+  background: #dddddd;
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  border: 2px solid grey;
+  outline: 0;
+  padding-left: 15px;
+}
+
+#login-forgot-container {
+  height: 100px;
+  margin-bottom: 1%;
+}
+
+#login-forgot-container > div > button {
+  width: 95px;
+  height: 45px;
+  border-radius: 8px;
+  font-size: 17px;
+  background: #808080;
+  border: 1px solid #a1a0a0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 200;
+  margin-top: 1%;
+}
+
+#login-forgot-container > div > p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 17px;
+  text-decoration: underline;
+}
+
+#login-forgot-container > div > p:hover {
+  cursor: pointer;
+}
+
+.post-form-content {
+  height: 50px;
+  width: 100%;
+  color: white;
+}
+
+.post-form-content-detail{
+  width: 90%;
+  margin: 0 auto;
+  font-size: 17px;
+  font-weight: 200;
+}
+
+.post-form-content-link {
+  text-decoration: underline;
+}
+
+.post-form-content-link:hover {
+  cursor: pointer;
+}
+
+
+
+
+#create-account-container {
+  height: 100px;
+  width: 100%;
+  padding-left: 15px;
+  margin-bottom: 1%;
+}
+
+#create-account-button {
+  width: 200px;
+  height: 45px;
+  border-radius: 8px;
+  font-size: 17px;
+  background: #fed136;
+  border: 1px solid #a1a0a0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 200;
+  margin-top: 1%;
+}
+
+
+
+.buffer {
+  height: 50px;
+}

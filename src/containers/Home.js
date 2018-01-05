@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import LoginForm from '../components/Home/loginForm';
-import CreateUserForm from '../components/Home/createUserForm';
-import LogoutButton from '../components/Home/logoutButton';
 import Navbar from '../components/navbar';
 import '../stylesheets/home.css';
 
 class Home extends Component{
 
+  handleLoginClick = () => {
+    this.props.history.push('/login')
+  }
+
+  handleSignupClick = () => {
+    this.props.history.push('/account/create')
+  }
+
   render(){
     return(
-    <div >
       <div className="container-fluid" id="home-page">
-        <div className="row">
-          <Navbar />
-        </div>
         <div className="row" id="home-content">
           <div className="col-md-2">
           </div>
@@ -30,8 +31,8 @@ class Home extends Component{
             </div>
             <div className="row" id="home-main-login-signup">
               <div id="login-signup-buttons">
-                <button className="btn btn-primary my-2 my-sm-0 login-button nav-button" type="submit">Log In</button>
-                <button className="btn btn-primary my-2 my-sm-0 signup-button nav-button" type="submit">Sign Up</button>
+                <button className="btn btn-primary my-2 my-sm-0 login-button nav-button" onClick={this.handleLoginClick} type="submit">Log In</button>
+                <button className="btn btn-primary my-2 my-sm-0 signup-button nav-button" onClick={this.handleSignupClick} type="submit">Sign Up</button>
               </div>
             </div>
             <div className="row" id="home-main-fabfoundry-link">
@@ -44,7 +45,6 @@ class Home extends Component{
           </div>
         </div>
       </div>
-    </div>
     )
   }
 }

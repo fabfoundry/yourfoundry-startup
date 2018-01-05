@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import * as sessionActions from '../../actions/sessionActions';
 
 class LoginForm extends Component{
-  
+
   constructor(){
     super();
     this.state = {
@@ -12,42 +12,47 @@ class LoginForm extends Component{
       password: ""
     }
   }
-  
+
   handleEmailInput = (event) => {
     this.setState({email: event.target.value})
   }
-  
+
   handlePasswordInput = (event) => {
     this.setState({password: event.target.value})
   }
-  
+
   handleLoginSubmit = (event) => {
     event.preventDefault()
     this.props.actions.logInUser({email: this.state.email, password: this.state.password})
   }
-  
+
   render(){
     return(
-      <form id="login-form" onSubmit={this.handleLoginSubmit}>
+      <form className="auth-form" onSubmit={this.handleLoginSubmit}>
+        <label>Email</label><br/>
         <input
-          className="login-create-form-input"
           onChange={this.handleEmailInput}
-          type="email" 
+          type="email"
           value={this.state.email}
-          placeholder="Email"
-        /><br/>
+        /><br/><br/>
+        <label>Password</label><br/>
         <input
-          className="login-create-form-input"
-          onChange={this.handlePasswordInput} 
+          onChange={this.handlePasswordInput}
           type="password"
           value={this.state.password}
-          placeholder="Password"
         /><br/>
-        <button id="login-button" className="btn btn-primary">Log In</button>
+        <div className="row" id="login-forgot-container">
+          <div className="col-4">
+            <button id="login-button" className="btn btn-primary login-button">Log In</button>
+          </div>
+          <div className="col-8">
+            <p>Forgot your password?</p>
+          </div>
+        </div>
       </form>
     )
   }
-  
+
 }
 
 function mapDispatchToProps(dispatch){
