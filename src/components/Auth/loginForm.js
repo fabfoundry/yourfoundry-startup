@@ -9,7 +9,8 @@ class LoginForm extends Component{
     super();
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      emailValid: true
     }
   }
 
@@ -23,17 +24,33 @@ class LoginForm extends Component{
 
   handleLoginSubmit = (event) => {
     event.preventDefault()
-    this.props.actions.logInUser({email: this.state.email, password: this.state.password})
+    this.props.setLoader(true)
+    this.props.actions.logInUser(
+      {email: this.state.email, password: this.state.password},
+      this.props.setLoader,
+      this.props.history
+    )
+  }
+
+  handleEmailOnBlur = (event) => {
+    if(!event.target.value.includes("@" && ".")){
+      this.setState({emailValid: false})
+    }
+    else{
+      this.setState({emailValid: true})
+    }
   }
 
   render(){
     return(
       <form className="auth-form" onSubmit={this.handleLoginSubmit}>
-        <label>Email</label><br/>
+        <label>{this.state.emailValid ? "Email" : "Please enter a valid email address"}</label><br/>
         <input
+          className={this.state.emailValid ? null : "invalid-email-input"}
           onChange={this.handleEmailInput}
           type="email"
           value={this.state.email}
+          onBlur={this.handleEmailOnBlur}
         /><br/><br/>
         <label>Password</label><br/>
         <input

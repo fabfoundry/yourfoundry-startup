@@ -1,5 +1,5 @@
 .auth-page {
-  height: 95%;
+  height: 90%;
   background: black;
   overflow: auto;
 }
@@ -26,7 +26,6 @@
 
 .auth-form {
   color: white;
-  width: 100%;
   width: 90%;
   margin: 0 auto;
   font-size: 17px;
@@ -42,6 +41,33 @@
   border: 2px solid grey;
   outline: 0;
   padding-left: 15px;
+  -webkit-transition: border .7s ease;
+  -moz-transition: border .7s ease;
+  -o-transition: border .7s ease;
+  transition: border .7s ease;
+}
+
+input.invalid-email-input {
+  border: 3px solid #ce2c2c;
+}
+
+
+.invalid-login {
+  height: 10%;
+  margin-bottom: 20px;
+}
+
+.invalid-login-message {
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  border: 1px solid #ea3939;
+  border-radius: 10px;
+  width: 90%;
+  height: 45px;
+  margin: 0 auto;
+  text-align: center;
+  background: #ecdede;
 }
 
 #login-forgot-container {
@@ -121,8 +147,6 @@
   margin-top: 1%;
 }
 
-
-
-.buffer {
-  height: 50px;
+#create-account-button:hover {
+  cursor: pointer;
 }

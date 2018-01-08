@@ -3,7 +3,7 @@ body {
 }
 
 #home-page {
-  height: 95%;
+  height: 90%;
   /*width: 100vw;*/
   background: black;
 }
@@ -32,8 +32,8 @@ body {
 
 .nav-button {
   margin: 7px;
-  width: 115px;
-  height: 45px;
+  width: 100px;
+  height: 40px;
   font-size: 17px;
   border-radius: 8px;
   border: 1px solid #a1a0a0;
