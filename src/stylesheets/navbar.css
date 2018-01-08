@@ -1,14 +1,14 @@
 #navbar-container {
   padding: 0;
   background: black;
-  height: 10%;
+  height: 15%;
 }
 
 #navbar {
   margin-left: 10%;
   margin-right: 10%;
   position: relative;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
 }
 
@@ -26,4 +26,26 @@
 
 .navbar-logo {
   font-size: 25px;
+}
+
+
+.nav-item.dropdown {
+  list-style-type: none;
+}
+
+
+#navbarDropdownMenuLink {
+  background: white;
+  color: black;
+  font-size: 16px;
+  font-weight: 200;
+  border-radius: 5px;
+}
+
+.dropdown-menu > a:hover {
+  text-decoration: underline;
+}
+
+.dropdown-menu > a:active {
+  background: lightgrey;
 }

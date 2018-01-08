@@ -47,17 +47,17 @@
   transition: border .7s ease;
 }
 
-#invalid-email-input {
+input.invalid-email-input {
   border: 3px solid #ce2c2c;
 }
 
 
-#invalid-login {
+.invalid-login {
   height: 10%;
   margin-bottom: 20px;
 }
 
-#invalid-login-message {
+.invalid-login-message {
   color: black;
   font-size: 15px;
   font-weight: 400;
@@ -145,4 +145,8 @@
   transform: translateY(-50%);
   font-weight: 200;
   margin-top: 1%;
+}
+
+#create-account-button:hover {
+  cursor: pointer;
 }

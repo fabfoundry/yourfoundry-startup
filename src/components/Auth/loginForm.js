@@ -46,7 +46,7 @@ class LoginForm extends Component{
       <form className="auth-form" onSubmit={this.handleLoginSubmit}>
         <label>{this.state.emailValid ? "Email" : "Please enter a valid email address"}</label><br/>
         <input
-          id={this.state.emailValid ? null : "invalid-email-input"}
+          className={this.state.emailValid ? null : "invalid-email-input"}
           onChange={this.handleEmailInput}
           type="email"
           value={this.state.email}

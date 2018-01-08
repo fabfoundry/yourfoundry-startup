@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import LogoutButton from './Auth/logoutButton';
+import LogoutLink from './Auth/logoutLink';
 import '../stylesheets/navbar.css'
 
 class Navbar extends Component {
@@ -28,7 +28,7 @@ class Navbar extends Component {
         <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a className="dropdown-item" href="#">Action</a>
           <a className="dropdown-item" href="#">Another action</a>
-          <LogoutButton />
+          <LogoutLink />
         </div>
       </li>
     )
@@ -47,7 +47,7 @@ class Navbar extends Component {
             <ul className="navbar-nav mr-auto">
             </ul>
             {
-              !!sessionStorage.jwt || this.props.session && this.props.session != "invalid" ?
+              (!!sessionStorage.jwt || this.props.session === true) ?
               this.accountDropdown() :
               this.loginLogout()}
           </div>

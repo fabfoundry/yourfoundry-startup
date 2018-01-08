@@ -33,8 +33,8 @@ class Login extends Component {
 
   invalidLoginMessage = () => {
     return(
-      <div className="row" id="invalid-login">
-        <p id="invalid-login-message">Invalid user credentials. Unrecognized Email and Password combination.</p>
+      <div className="row invalid-login">
+        <p className="invalid-login-message">Invalid user credentials. Unrecognized Email and Password combination.</p>
       </div>
     )
   }
