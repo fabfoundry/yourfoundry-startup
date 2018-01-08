@@ -13,7 +13,6 @@ class CreateAccountForm extends Component{
       lastName: "",
       email: "",
       password: "",
-      passwordConf: "",
       company: ""
     }
   }
@@ -24,10 +23,6 @@ class CreateAccountForm extends Component{
 
   handlePasswordInput = (event) => {
     this.setState({password: event.target.value})
-  }
-
-  handlePasswordConfInput = (event) => {
-    this.setState({passwordConf: event.target.value})
   }
 
   handleFirstNameInput = (event) => {
@@ -77,12 +72,6 @@ class CreateAccountForm extends Component{
           onChange={this.handlePasswordInput}
           type="password"
           value={this.state.password}
-        /><br/><br/>
-        <label>Password Confirmation</label><br/>
-        <input
-          onChange={this.handlePasswordConfInput}
-          type="password"
-          value={this.state.passwordConf}
         /><br/><br/>
         <label>Company Name</label><br/>
         <input

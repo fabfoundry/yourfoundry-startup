@@ -13,10 +13,12 @@ const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
 
 ReactDOM.render(
-  <div id="app">
-    <Navbar />
+  <div>
     <Provider store={createStoreWithMiddleware(reducers)}>
+      <div id="app">
+        <Navbar />
         <Routes />
+      </div>
     </Provider>
   </div>,
   document.getElementById('root'));

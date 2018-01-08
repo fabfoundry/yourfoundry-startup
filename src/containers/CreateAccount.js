@@ -31,8 +31,6 @@ class CreateAccount extends Component {
           <div className="col-md-4">
           </div>
         </div>
-        <div className="row buffer">
-        </div>
       </div>
     )
   }

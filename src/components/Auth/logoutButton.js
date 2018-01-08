@@ -4,11 +4,11 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 class LogoutButton extends Component {
-  
+
   handleLogoutClick = () => {
     this.props.actions.logOutUser()
-  }  
-  
+  }
+
   render(){
     return(
       <button onClick={this.handleLogoutClick}>Log Out</button>
