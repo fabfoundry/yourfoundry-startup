@@ -3,15 +3,15 @@ import * as sessionActions from '../../actions/sessionActions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-class LogoutButton extends Component {
-  
+class LogoutLink extends Component {
+
   handleLogoutClick = () => {
     this.props.actions.logOutUser()
-  }  
-  
+  }
+
   render(){
     return(
-      <button onClick={this.handleLogoutClick}>Log Out</button>
+      <a className="dropdown-item" href="/" onClick={this.handleLogoutClick}>Log Out</a>
     )
   }
 }
@@ -22,4 +22,4 @@ function mapDispatchToProps(dispatch){
   }
 }
 
-export default connect(null, mapDispatchToProps)(LogoutButton)
+export default connect(null, mapDispatchToProps)(LogoutLink)

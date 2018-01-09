@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Navbar from '../components/navbar';
 import '../stylesheets/home.css';
 
 class Home extends Component{
@@ -37,7 +36,7 @@ class Home extends Component{
             </div>
             <div className="row" id="home-main-fabfoundry-link">
               <div id="main-fabfoundry-link">
-                <p id="main-fabfoundry-link-text">A <span className="underline"><a href="http://www.fabfoundry.net" target="_blank">FabFoundry</a></span> Service</p>
+                <p id="main-fabfoundry-link-text">A <span className="underline"><a href="http://www.fabfoundry.net" target="_blank" rel="noopener noreferrer">FabFoundry</a></span> Service</p>
               </div>
             </div>
           </div>
