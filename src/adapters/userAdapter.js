@@ -2,7 +2,7 @@ class UserAdapter {
 
   static create(credentials) {
 
-    const request = new Request("http://yourfoundry-server-staging.us-east-1.elasticbeanstalk.com/api/v1/users", {
+    const request = new Request("https://yourfoundry-server-staging.us-east-1.elasticbeanstalk.com/api/v1/users", {
       method: 'POST',
       headers: new Headers({
         'Content-Type': 'application/json',
