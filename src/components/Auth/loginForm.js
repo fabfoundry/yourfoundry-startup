@@ -51,12 +51,14 @@ class LoginForm extends Component{
           type="email"
           value={this.state.email}
           onBlur={this.handleEmailOnBlur}
+          required
         /><br/><br/>
         <label>Password</label><br/>
         <input
           onChange={this.handlePasswordInput}
           type="password"
           value={this.state.password}
+          required
         /><br/>
         <div className="row" id="login-forgot-container">
           <div className="col-4">

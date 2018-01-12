@@ -2,9 +2,130 @@ body {
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+/* Small devices (landscape phones, 250px and up) */
+@media (min-width: 250px) { 
+  #main-header-text {
+    font-size: 0.9em;
+  }
+  
+  #main-description-text {
+    font-size: 0.5em;
+  }
+  
+  #main-fabfoundry-link-text {
+    font-size: 0.5em;
+  }
+  
+  .nav-button {
+      height: 2.0em;
+      width: 4.7em;
+  }
+}
+
+/* Small devices (landscape phones, 350px and up) */
+@media (min-width: 350px) { 
+  #main-header-text {
+    font-size: 1.1em;
+  }
+  
+  #main-description-text {
+    font-size: 0.7em;
+  }
+  
+  #main-fabfoundry-link-text {
+    font-size: 0.7em;
+  }
+  
+  .nav-button {
+    height: 2.2em;
+    width: 5.0em;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  #main-header-text {
+    font-size: 1.3em;
+  }
+  
+  #main-description-text {
+    font-size: 0.9em;
+  }
+  
+  #main-fabfoundry-link-text {
+    font-size: 0.9em;
+  }
+  
+  .nav-button {
+    height: 2.0em;
+    width: 4.7em;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #main-header-text {
+    font-size: 1.4em;
+  }
+  
+  #main-description-text {
+    font-size: 1.0em;
+  }
+  
+  #main-fabfoundry-link-text {
+    font-size: 1.0em;
+  }
+  
+  .nav-button {
+    height: 2.3em;
+    width: 5.0em;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #main-header-text {
+    font-size: 1.5em;
+  }
+  
+  #main-description-text {
+    font-size: 1.1em;
+  }
+  
+  #main-fabfoundry-link-text {
+    font-size: 1.1em;
+  }
+  
+  .nav-button {
+    height: 2.5em;
+    width: 5.5em;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #main-header-text {
+    font-size: 1.8em; /* 1.5x default size */
+  }
+  
+  #main-description-text {
+    font-size: 1.15em; /* 1.5x default size */
+  }
+  
+  #main-fabfoundry-link-text {
+    font-size: 1.15em; /* 1.5x default size */
+  } 
+  
+  .nav-button {
+    height: 2.5em;
+    width: 5.5em;
+  }
+  
+}
+
+
 #home-page {
   height: 90%;
-  /*width: 100vw;*/
   background: black;
 }
 
@@ -32,12 +153,13 @@ body {
 
 .nav-button {
   margin: 7px;
-  width: 100px;
-  height: 40px;
-  font-size: 17px;
+  /*height: 5vh;
+  width: 12vh;*/
+  /*font-size: 2vh;*/
   border-radius: 8px;
   border: 1px solid #a1a0a0;
   font-weight: 200;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 
@@ -79,7 +201,6 @@ body {
 
 #main-header-text {
   color: white;
-  font-size: 2.0vw;
   font-weight: 500;
   position: relative;
   top: 50%;
@@ -104,7 +225,6 @@ body {
 
 #main-description-text {
   color: white;
-  font-size: 1.3vw;
   font-weight: 300;
   position: relative;
   top: 50%;
@@ -150,7 +270,7 @@ body {
 
 #main-fabfoundry-link-text {
   color: white;
-  font-size: 1.3vw;
+  /*font-size: 1.3vw;*/
   font-weight: 300;
   position: relative;
   top: 50%;
