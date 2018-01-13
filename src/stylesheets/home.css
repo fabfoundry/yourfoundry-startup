@@ -105,7 +105,7 @@ body {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   #main-header-text {
-    font-size: 1.8em; /* 1.5x default size */
+    font-size: 1.7em; /* 1.5x default size */
   }
   
   #main-description-text {
@@ -125,7 +125,7 @@ body {
 
 
 #home-page {
-  height: 90%;
+  height: 92%;
   background: black;
 }
 

@@ -1,0 +1,116 @@
+/* Small devices (landscape phones, 250px and up) */
+@media (min-width: 250px) { 
+  #profile-title > p {
+    font-size: 2.2em;
+  }
+  .profile-list-item {
+    font-size: 0.8em;
+  }
+}
+/* Small devices (landscape phones, 350px and up) */
+@media (min-width: 350px) { 
+  #profile-title > p {
+    font-size: 2.4em;
+  }
+  .profile-list-item {
+    font-size: 1.0em;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  #profile-title > p {
+    font-size: 2.5em;
+  }
+  .profile-list-item {
+    font-size: 1.1em;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #profile-title > p {
+    font-size: 2.5em;
+  }
+  .profile-list-item {
+    font-size: 1.1em;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #profile-title > p {
+    font-size: 2.6em;
+  }
+  .profile-list-item {
+    font-size: 1.2em;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #profile-title > p {
+    font-size: 2.8em;
+  }
+  .profile-list-item {
+    font-size: 1.2em;
+  }
+}
+
+
+
+.profile-page {
+  height: 92%;
+  background: white;
+}
+
+#profile-page-container {
+  height: 100%;
+  width: 100%;
+}
+
+#profile-title-container {
+  height: 10%;
+}
+
+#profile-title {
+  width: 100%;
+  text-align: center;
+}
+
+#profile-title > p {
+  padding-top: 10%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+
+
+
+#profile-details-container {
+  height: 80%;
+  text-align: center;
+}
+
+#profile-details {
+  height: 100%;
+  width: 100%;
+}
+
+#profile-details-list-container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#profile-details-list-items {
+  display: inline-block;
+  text-align: left;
+}
+
+.profile-list-item {
+  padding-top: 4%;
+}
+
+.profile-list-item-label {
+  font-weight: bold;
+}

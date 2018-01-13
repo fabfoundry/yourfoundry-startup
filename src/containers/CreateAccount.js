@@ -44,9 +44,9 @@ class CreateAccount extends Component {
     return(
       <div className="container-fluid auth-page">
         <div className="row auth-form-container">
-          <div className="col-md-4">
+          <div className="col-md-3">
           </div>
-          <div className="col-md-4">
+          <div className="col-md-6">
             {this.displayLoader()}
             <div className="auth-form-title">
               <p>Create a YourFoundry Account</p>
@@ -62,7 +62,7 @@ class CreateAccount extends Component {
               <p className="post-form-content-detail">Already have an account? <span className="post-form-content-link" onClick={this.handleLoginClick}>Log in.</span></p>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-3">
           </div>
         </div>
       </div>
