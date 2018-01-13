@@ -1,5 +1,5 @@
 export default {
   session: !!sessionStorage.jwt,
-  startupName: "",
+  startupName: null,
   user: {}
 }

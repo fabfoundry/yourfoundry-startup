@@ -43,7 +43,7 @@ class Navbar extends Component {
                 data-toggle="dropdown" 
                 aria-haspopup="true" 
                 aria-expanded="false">
-                {this.props.startupName.length > 0 ? this.props.startupName : <span>Loading...</span>}
+                {this.props.startupName ? this.props.startupName : <span>Loading...</span>}
         </a>
         <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a className="dropdown-item" href="/account/home">Home</a>
