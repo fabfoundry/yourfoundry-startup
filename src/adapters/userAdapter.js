@@ -1,8 +1,8 @@
 class UserAdapter {
 
   static create(credentials) {
-    // const request = new Request("https://d4ue5pwgatcq3.cloudfront.net/api/v1/users", {
-    const request = new Request("http://localhost:3000/api/v1/users", {
+    const request = new Request("https://d4ue5pwgatcq3.cloudfront.net/api/v1/users", {
+    // const request = new Request("http://localhost:3000/api/v1/users", {
       method: 'POST',
       headers: new Headers({
         'Content-Type': 'application/json',
@@ -17,9 +17,9 @@ class UserAdapter {
   }
 
   static show(requestedData) {
-    // const request = new Request("https://d4ue5pwgatcq3.cloudfront.net/api/v1/users", {
     const authorizationToken = "Bearer " + sessionStorage.jwt
-    const requestUrl = "http://localhost:3000/api/v1/users/" + requestedData
+    // const requestUrl = "http://localhost:3000/api/v1/users/" + requestedData
+    const requestUrl = "https://d4ue5pwgatcq3.cloudfront.net/api/v1/users/" + requestedData
     const request = new Request(requestUrl, {
       method: 'GET',
       headers: new Headers({
