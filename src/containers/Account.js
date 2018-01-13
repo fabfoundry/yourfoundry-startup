@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import '../stylesheets/account.css';
 
 class Account extends Component {
 
@@ -11,7 +12,8 @@ class Account extends Component {
 
   render(){
     return(
-      <div>
+      <div className="container-fluid profile-page">
+        
       </div>
     )
   }

@@ -1,19 +1,19 @@
 #navbar-container {
   padding: 0;
   background: black;
-  height: 15%;
+  height: 8%;
 }
 
 #navbar {
   margin-left: 10%;
   margin-right: 10%;
   position: relative;
-  top: 40%;
+  top: 50%;
   transform: translateY(-50%);
 }
 
 #navbar.navbar-expand-lg.navbar-dark.bg-dark {
-  height: 100%;
+  height: 95%;
 }
 
 .collapsed-nav-container {
@@ -22,6 +22,8 @@
 
 .navbar {
   background-color: black!important;
+  position: relative;
+  z-index: 1000;
 }
 
 .navbar-logo {
@@ -40,6 +42,7 @@
   font-size: 16px;
   font-weight: 200;
   border-radius: 5px;
+  border: 2px solid lightgray;
 }
 
 .dropdown-menu > a:hover {
