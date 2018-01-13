@@ -18,8 +18,8 @@ class UserAdapter {
 
   static show(requestedData) {
     const authorizationToken = "Bearer " + sessionStorage.jwt
-    // const requestUrl = "http://localhost:3000/api/v1/users/" + "0?q=" + requestedData
-    const requestUrl = "https://stagingapi.yourfoundry.com/api/v1/users/" + requestedData
+    const requestUrl = "https://stagingapi.yourfoundry.com/api/v1/users/" + "0?q=" + requestedData
+    // const requestUrl = "http://localhost:3000/api/v1/users" + "0?q=" + requestedData
     const request = new Request(requestUrl, {
       method: 'GET',
       headers: new Headers({
