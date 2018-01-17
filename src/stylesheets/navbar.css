@@ -2,6 +2,8 @@
   padding: 0;
   background: black;
   height: 8%;
+  position: fixed;
+  z-index: 5000;
 }
 
 #navbar {

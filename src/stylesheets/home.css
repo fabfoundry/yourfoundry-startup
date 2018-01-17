@@ -105,15 +105,15 @@ body {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   #main-header-text {
-    font-size: 1.7em; /* 1.5x default size */
+    font-size: 1.8em; /* 1.5x default size */
   }
   
   #main-description-text {
-    font-size: 1.15em; /* 1.5x default size */
+    font-size: 1.3em; /* 1.5x default size */
   }
   
   #main-fabfoundry-link-text {
-    font-size: 1.15em; /* 1.5x default size */
+    font-size: 1.3em; /* 1.5x default size */
   } 
   
   .nav-button {
@@ -125,7 +125,7 @@ body {
 
 
 #home-page {
-  height: 92%;
+  height: 100%;
   background: black;
 }
 
@@ -176,7 +176,7 @@ body {
 }
 
 #home-content-container {
-  height: 75%;
+  height: 95%;
   background-image: url('../assets/Home/background_map.png');
   background-repeat: no-repeat;
   background-position: center;

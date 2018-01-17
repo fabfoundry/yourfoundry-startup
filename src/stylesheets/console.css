@@ -1,0 +1,76 @@
+/* Small devices (landscape phones, 250px and up) */
+@media (min-width: 250px) { 
+  #company-name {
+    font-size: 1.3em;
+  }
+}
+/* Small devices (landscape phones, 350px and up) */
+@media (min-width: 350px) { 
+  #company-name {
+    font-size: 1.3em;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  #company-name {
+    font-size: 1.7em;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #company-name {
+    font-size: 1.7em;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #company-name {
+    font-size: 1.7em;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #company-name {
+    font-size: 1.7em;
+  }
+}
+
+
+
+#main-console-container {
+  height: 100%;
+  width: 100%;
+  background: black;
+  overflow: auto;
+}
+
+#main-console {
+  height: 75%;
+  width: 70%;
+  background: black;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#company-name-container {
+  height: 7%;
+  background: black;
+  margin-top: 5px;
+  border: 1px solid white;
+}
+
+#company-name {
+  height: 100%;
+  min-width: 25%;
+  padding-left: 8px;
+}
+
+#company-name > p {
+  color: white;
+  font-weight: 200;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

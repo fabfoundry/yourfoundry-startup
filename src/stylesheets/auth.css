@@ -1,7 +1,8 @@
 .auth-page {
-  height: 85%;
+  height: 100%;
   background: black;
   overflow: auto;
+  padding-top: 5%;
 }
 
 .auth-form-container {
