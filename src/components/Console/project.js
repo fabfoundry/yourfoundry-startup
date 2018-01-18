@@ -5,7 +5,10 @@ class Project extends Component {
 
   render(){
     return(
-      <div className="row project-container">
+      <div className="row row-container" id="project">
+        <div className="row-content">
+          <p><span>+</span> {this.props.name}</p>
+        </div>
       </div>
     )
   }

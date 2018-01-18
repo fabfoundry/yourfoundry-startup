@@ -1,37 +1,37 @@
 /* Small devices (landscape phones, 250px and up) */
 @media (min-width: 250px) { 
-  #company-name {
+  .row-content > p {
     font-size: 1.3em;
   }
 }
 /* Small devices (landscape phones, 350px and up) */
 @media (min-width: 350px) { 
-  #company-name {
+  .row-content > p {
     font-size: 1.3em;
   }
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
-  #company-name {
-    font-size: 1.7em;
+  .row-content > p {
+    font-size: 1.4em;
   }
 }
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  #company-name {
-    font-size: 1.7em;
+  .row-content > p {
+    font-size: 1.4em;
   }
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  #company-name {
-    font-size: 1.7em;
+  .row-content > p {
+    font-size: 1.4em;
   }
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  #company-name {
-    font-size: 1.7em;
+  .row-content > p {
+    font-size: 1.4em;
   }
 }
 
@@ -54,23 +54,106 @@
   transform: translateY(-50%);
 }
 
-#company-name-container {
-  height: 7%;
+.row-container {
+  min-height: 7%;
   background: black;
   margin-top: 5px;
   border: 1px solid white;
 }
 
-#company-name {
-  height: 100%;
+.row-content {
+  min-height: 100%;
   min-width: 25%;
   padding-left: 8px;
 }
 
-#company-name > p {
+.row-content > p {
   color: white;
   font-weight: 200;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
+
+#add-new-project, #project {
+  background: #474747;
+  border: none;
+}
+
+#add-new-project:hover, #project:hover {
+  cursor: pointer;
+  background: #474747de;
+}
+
+
+
+
+/* Modal */
+
+.modal {
+  background: #0000005c;
+}
+
+.modal-dialog {
+  top: 35%;
+  transform: translateY(-50%);
+}
+
+.modal-content {
+  border-radius: 0;
+  background: #000000e6;
+  border: 1px solid grey;
+}
+
+.modal-header {
+  border-bottom: 0;
+  color: white;
+}
+
+.modal-footer {
+  border-top: 0;
+}
+
+.modal-footer > button {
+  background: none;
+}
+
+.modal-footer > button:hover {
+  cursor: pointer;
+}
+
+#add-project-cancel {
+  color: lightgrey;
+  font-weight: bold;
+}
+
+#add-project-add {
+  color: #009700;
+  font-weight: bold;
+}
+
+#new-project-name {
+  width: 100%;
+  height: 40px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  padding-left: 10px;
+  font-size: 25px;
+  border-bottom: 2px solid white;
+  background: #00000000;
+  color: white;
+  text-align: center;
+}
+
+#new-project-name:focus {
+  outline: none;
+}
+
+#new-project-name::placeholder {
+  font-weight: 200;
+  text-align: center;
+}
+
+
+
