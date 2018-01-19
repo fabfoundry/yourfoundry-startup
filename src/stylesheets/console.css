@@ -54,7 +54,12 @@
   transform: translateY(-50%);
 }
 
+#user-console-container {
+  width: 100%;
+}
+
 #projects-container {
+  width: 100%;
 }
 
 .row-container {
@@ -89,11 +94,20 @@
 }
 
 #contract-management, #supplier-management, #payment-management, #project-management {
-  width: 95%;
-  margin: 0 auto;
-  margin-top: 5px;
+  width: 100%;
+  margin: 5px auto;
   background: #828282;
   border: none;
+}
+
+.trash-icon-container {
+  text-align: right;
+}
+
+.trash-icon {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 
@@ -121,27 +135,22 @@
   color: white;
 }
 
+.modal-body {
+  color: white;
+}
+
 .modal-footer {
   border-top: 0;
 }
 
 .modal-footer > button {
-  background: none;
+  font-weight: bold;
 }
 
 .modal-footer > button:hover {
   cursor: pointer;
 }
 
-#add-project-cancel {
-  color: lightgrey;
-  font-weight: bold;
-}
-
-#add-project-add {
-  color: #009700;
-  font-weight: bold;
-}
 
 #new-project-name {
   width: 100%;
@@ -150,7 +159,7 @@
   border-left: 0;
   border-right: 0;
   padding-left: 10px;
-  font-size: 25px;
+  font-size: 20px;
   border-bottom: 2px solid white;
   background: #00000000;
   color: white;
@@ -165,6 +174,4 @@
   font-weight: 200;
   text-align: center;
 }
-
-
 

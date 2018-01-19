@@ -35,6 +35,24 @@ class ProjectAdapter {
     .then(response => { return response.json() })
     .catch(error => { return error })
   }
+  
+  static destroy(projectId) {
+    const authorizationToken = "Bearer " + sessionStorage.jwt
+    let url = "http://localhost:3000/api/v1/projects/" + projectId
+    // let url = "https://stagingapi.yourfoundry.com/api/v1/projects/" + projectId
+    const request = new Request(url, {
+      method: 'DELETE',
+      headers: new Headers({
+        'Content-Type': 'application/json',
+        'Authorization': authorizationToken
+      }),
+    });
+
+
+    return fetch(request)
+    .then(response => { return response.json() })
+    .catch(error => { return error })
+  }
 
 }
 

@@ -31,21 +31,21 @@ class AddProjectModal extends Component {
   render(){
     return(
       <div className="static-modal">
-        <Modal.Dialog id="add-project-modal">
+        <Modal.Dialog>
           <Modal.Header>
             {this.state.errorMsg ? <p>Project name cannot already exist or be blank.</p> : null}
           </Modal.Header>
 
           <Modal.Body>
             <input id="new-project-name" 
-                   placeholder="(Project Name)"
+                   placeholder="Project Name..."
                    onChange={this.handleProjectNameInput}
                    value={this.state.projectName} />
           </Modal.Body>
 
           <Modal.Footer>
-            <Button id="add-project-cancel" onClick={this.props.hideAddProjectModal}>Cancel</Button>
-            <Button id="add-project-add" onClick={this.handleAddClick}>Add</Button>
+            <Button type="button" className="btn btn-secondary" onClick={this.props.hideAddProjectModal}>Cancel</Button>
+            <Button type="button" className="btn btn-success" onClick={this.handleAddClick}>Add</Button>
           </Modal.Footer>
 
         </Modal.Dialog>

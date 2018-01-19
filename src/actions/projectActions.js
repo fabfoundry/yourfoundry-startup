@@ -31,3 +31,15 @@ export function createProject(projectName, errorMsg, hideModal) {
     })
   };
 }
+
+export function deleteProject(projectId, hideModal) {
+  return function(dispatch) {
+    return projectAdapter.destroy(projectId, hideModal)
+    .then(response => {
+      if(response["request"] === "complete"){
+        dispatch(fetchAllProjects(response["projects"]))
+        hideModal()
+      }
+    })
+  };
+}

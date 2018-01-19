@@ -4,6 +4,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import { Dimmer, Loader } from 'semantic-ui-react';
 import AddProjectModal from '../components/Console/addProjectModal';
+import DeleteProjectModal from '../components/Console/deleteProjectModal';
 import * as userActions from '../actions/userActions';
 import * as projectActions from '../actions/projectActions';
 import '../stylesheets/console.css';
@@ -13,7 +14,9 @@ class Console extends Component {
   constructor(){
     super();
     this.state = {
-      displayAddProjectModal: false
+      displayAddProjectModal: false,
+      displayDeleteProjectModal: false,
+      selectedProject: null
     }
   }
   
@@ -30,6 +33,18 @@ class Console extends Component {
     this.setState({displayAddProjectModal: false})
   }
   
+  displayDeleteProjectModal = () => {
+    this.setState({displayDeleteProjectModal: true})
+  }
+  
+  hideDeleteProjectModal = () => {
+    this.setState({displayDeleteProjectModal: false})
+  }
+  
+  setSelectedProject = (project) => {
+    this.setState({selectedProject: project})
+  }
+  
   displayLoader = () => {
       return(
         <Dimmer active>
@@ -41,19 +56,23 @@ class Console extends Component {
   displayProjects = () => {
     if(this.props.projects.length > 0){
       return this.props.projects.map((project) => {
-        return <Project key={project.id} name={project.name}/>
+        return <Project key={project.id} 
+                        name={project.name} 
+                        displayDeleteProjectModal={this.displayDeleteProjectModal} 
+                        project={project}
+                        setSelectedProject={this.setSelectedProject} />
       })
     }
   }
 
   render(){
-    console.log(this.props.projects)
+    console.log(this.state.selectedProject)
     return(
       <div className="container-fluid" id="main-console-container">
           <div className="row" id="main-console">
             {
               !this.props.user ? this.displayLoader() :
-              <div className="col-md-12">
+              <div className="col-md-12" id="user-console-container">
                 <div className="row row-container">
                   <div className="row-content">
                     <p>{this.props.user.company_name}</p>
@@ -75,6 +94,14 @@ class Console extends Component {
             <AddProjectModal 
               hideAddProjectModal={this.hideAddProjectModal}
               createProject={this.props.actions.createProject}/> 
+            : null 
+          }
+          { 
+            this.state.displayDeleteProjectModal ? 
+            <DeleteProjectModal
+              projectName={this.state.selectedProject["name"]}
+              hideDeleteProjectModal={this.hideDeleteProjectModal}
+              deleteProject={() => this.props.actions.deleteProject(this.state.selectedProject["id"], this.hideDeleteProjectModal)}/> 
             : null 
           }
       </div>
