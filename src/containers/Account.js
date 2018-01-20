@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import Console from './Console';
 import '../stylesheets/account.css';
 
 class Account extends Component {
@@ -12,8 +13,8 @@ class Account extends Component {
 
   render(){
     return(
-      <div className="container-fluid profile-page">
-        
+      <div className="account-page">
+        <Console />
       </div>
     )
   }

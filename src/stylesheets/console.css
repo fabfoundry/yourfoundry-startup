@@ -1,0 +1,177 @@
+/* Small devices (landscape phones, 250px and up) */
+@media (min-width: 250px) { 
+  .row-content > p {
+    font-size: 1.0em;
+  }
+}
+/* Small devices (landscape phones, 350px and up) */
+@media (min-width: 350px) { 
+  .row-content > p {
+    font-size: 1.1em;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  .row-content > p {
+    font-size: 1.4em;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .row-content > p {
+    font-size: 1.4em;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .row-content > p {
+    font-size: 1.4em;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .row-content > p {
+    font-size: 1.4em;
+  }
+}
+
+
+
+#main-console-container {
+  height: 100%;
+  width: 100%;
+  background: black;
+  overflow: auto;
+}
+
+#main-console {
+  height: 75%;
+  width: 70%;
+  background: black;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#user-console-container {
+  width: 100%;
+}
+
+#projects-container {
+  width: 100%;
+}
+
+.row-container {
+  min-height: 50px;
+  background: black;
+  margin-top: 5px;
+  border: 1px solid white;
+}
+
+.row-content {
+  min-height: 100%;
+  min-width: 25%;
+  padding-left: 8px;
+}
+
+.row-content > p {
+  color: white;
+  font-weight: 200;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#add-new-project, #project {
+  background: #474747;
+  border: none;
+}
+
+#add-new-project:hover, #project:hover {
+  cursor: pointer;
+  background: #474747de;
+}
+
+#contract-management, #supplier-management, #payment-management, #project-management {
+  width: 100%;
+  margin: 5px auto;
+  background: #828282;
+  border: none;
+}
+
+.trash-icon-container {
+  text-align: right;
+}
+
+.trash-icon {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+
+/* Modal */
+
+.modal {
+  background: #0000005c;
+}
+
+.modal-dialog {
+  top: 35%;
+  transform: translateY(-50%);
+}
+
+.modal-content {
+  border-radius: 0;
+  background: #000000e6;
+  border: 1px solid grey;
+}
+
+.modal-header {
+  border-bottom: 0;
+  color: white;
+}
+
+.modal-body {
+  color: white;
+}
+
+.modal-footer {
+  border-top: 0;
+}
+
+.modal-footer > button {
+  font-weight: bold;
+}
+
+.modal-footer > button:hover {
+  cursor: pointer;
+}
+
+
+#new-project-name {
+  width: 100%;
+  height: 40px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  padding-left: 10px;
+  font-size: 20px;
+  border-bottom: 2px solid white;
+  background: #00000000;
+  color: white;
+  text-align: center;
+}
+
+#new-project-name:focus {
+  outline: none;
+}
+
+#new-project-name::placeholder {
+  font-weight: 200;
+  text-align: center;
+}
+

@@ -37,7 +37,7 @@ class Profile extends Component {
     return( 
       <div className="container-fluid profile-page">
       {
-        Object.keys(this.props.user).length === 0 ? this.displayLoader() :
+        !this.props.user ? this.displayLoader() :
         <div id="profile-page-container">
           <div className="row" id="profile-title-container">
             <span id="profile-title"><p>{this.props.user.company_name}</p></span>
