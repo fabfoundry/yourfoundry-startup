@@ -1,36 +1,36 @@
 /* Small devices (landscape phones, 250px and up) */
 @media (min-width: 250px) { 
-  .row-content > p {
+  .row-content > p, .management-pending-complete {
     font-size: 1.0em;
   }
 }
 /* Small devices (landscape phones, 350px and up) */
 @media (min-width: 350px) { 
-  .row-content > p {
+  .row-content > p, .management-pending-complete {
     font-size: 1.1em;
   }
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
-  .row-content > p {
+  .row-content > p, .management-pending-complete {
     font-size: 1.4em;
   }
 }
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .row-content > p {
+  .row-content > p, .management-pending-complete {
     font-size: 1.4em;
   }
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .row-content > p {
+  .row-content > p, .management-pending-complete {
     font-size: 1.4em;
   }
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  .row-content > p {
+  .row-content > p, .management-pending-complete {
     font-size: 1.4em;
   }
 }
@@ -89,15 +89,26 @@
 }
 
 #add-new-project:hover, #project:hover {
-  cursor: pointer;
   background: #474747de;
 }
 
-#contract-management, #supplier-management, #payment-management, #project-management {
+#add-new-project:hover {
+  cursor: pointer;
+}
+
+#project-name:hover {
+  cursor: pointer;
+}
+
+.contract-management, .supplier-management, .payment-management, .project-management {
   width: 100%;
   margin: 5px auto;
   background: #828282;
   border: none;
+}
+
+.management-type:hover {
+  cursor: pointer;
 }
 
 .trash-icon-container {
@@ -110,7 +121,15 @@
   transform: translateY(-50%);
 }
 
+.trash-icon:hover {
+  cursor: pointer;
+}
 
+.management-pending-complete {
+  color: white;
+  list-style-type: none;
+  font-weight: 200;
+}
 
 
 /* Modal */
