@@ -3,9 +3,17 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as userActions from '../actions/userActions';
 import { Dimmer, Loader } from 'semantic-ui-react';
+import Spinner from '../assets/Loaders/Spin-1s-200px.svg';
 import '../stylesheets/profile.css';
 
 class Profile extends Component {
+  
+  constructor(){
+    super();
+    this.state = {
+      uploadingPhoto: false
+    }
+  }
 
   componentWillReceiveProps(nextProps){
     if(!nextProps.session){
@@ -25,12 +33,16 @@ class Profile extends Component {
       )
   }
   
+  updateUploadStatus = (bool) => {
+    this.setState({uploadingPhoto: bool})
+  }
+  
   handleUploadSubmit = (event) => {
     event.preventDefault()
     let reader = new FileReader();
     reader.onloadend = () => {
-      // document.getElementById("profile-photo").src = reader.result
-      this.props.actions.updateProfilePhoto(reader.result)
+      this.updateUploadStatus(true)
+      this.props.actions.updateProfilePhoto(reader.result, this.updateUploadStatus)
     }
     reader.readAsDataURL(document.getElementById("profile-photo-upload").files[0])
   }
@@ -38,9 +50,17 @@ class Profile extends Component {
   displayFileUploader = (action) => {
     return(
       <form className="profile-photo-uploader-form">
-        <label className="btn btn-secondary btn-sm" for="profile-photo-upload">{action} Image</label>
+        {
+          this.state.uploadingPhoto ? null : <label className="btn btn-secondary btn-sm" for="profile-photo-upload">{action} Image</label>
+        }
         <input type="file" id="profile-photo-upload" accept="image/png,image/jpeg" onChange={this.handleUploadSubmit}/>
       </form>
+    )
+  }
+  
+  displayUploadingPhotoSpinner = () => {
+    return(
+      <img id="photo-uploader-loader" src={Spinner}/>
     )
   }
   
@@ -65,9 +85,11 @@ class Profile extends Component {
           
           <div className="row" id="profile-photo-container">
             {
-              this.props.user.profile_photo.length > 0 ?
-              <img id="profile-photo" src={this.props.user.profile_photo}/> :
-              this.displayFileUploader("Upload")
+              this.state.uploadingPhoto ? this.displayUploadingPhotoSpinner() : (
+                this.props.user.profile_photo.length > 0 ?
+                <img id="profile-photo" src={this.props.user.profile_photo}/> :
+                this.displayFileUploader("Upload")
+                ) 
             }
           </div>
           
@@ -77,7 +99,6 @@ class Profile extends Component {
               this.displayFileUploader("Update") : null
             }
           </div>
-          
           <div className="row" id="profile-details-container">
             <div className="col-md-3">
             </div>

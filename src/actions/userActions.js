@@ -50,10 +50,11 @@ export function fetchUserData(requestedData="all") {
   };
 }
 
-export function updateProfilePhoto(imageBase64) {
+export function updateProfilePhoto(imageBase64, updateUploadStatus) {
   return (dispatch) => {
-    return userAdapter.updateProfilePhoto(imageBase64)
+    return userAdapter.updateProfilePhoto(imageBase64, updateUploadStatus)
     .then(response => {
+      updateUploadStatus(false)
       dispatch(fetchUserData())
     })
   };
