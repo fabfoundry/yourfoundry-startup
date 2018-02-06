@@ -49,3 +49,13 @@ export function fetchUserData(requestedData="all") {
     })
   };
 }
+
+export function updateProfilePhoto(imageBase64) {
+  return (dispatch) => {
+    return userAdapter.updateProfilePhoto(imageBase64)
+    .then(response => {
+      dispatch(fetchUserData())
+    })
+  };
+}
+

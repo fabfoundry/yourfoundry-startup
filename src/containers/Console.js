@@ -74,7 +74,13 @@ class Console extends Component {
               <div className="col-md-12" id="user-console-container">
                 <div className="row row-container">
                   <div className="row-content">
-                    <p>{this.props.user.company_name}</p>
+                    <p>
+                      {
+                        this.props.user.profile_photo.length > 0 ?
+                        <img className="profile-photo-icon" src={this.props.user.profile_photo}/> : null
+                      }
+                      <span id="startup-name">{this.props.user.company_name}</span>
+                    </p>
                   </div>
                 </div>
                 {this.displayProjects()}

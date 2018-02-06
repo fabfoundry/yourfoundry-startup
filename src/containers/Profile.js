@@ -25,6 +25,26 @@ class Profile extends Component {
       )
   }
   
+  handleUploadSubmit = (event) => {
+    event.preventDefault()
+    let reader = new FileReader();
+    reader.onloadend = () => {
+      // document.getElementById("profile-photo").src = reader.result
+      this.props.actions.updateProfilePhoto(reader.result)
+    }
+    reader.readAsDataURL(document.getElementById("profile-photo-upload").files[0])
+  }
+  
+  displayFileUploader = (action) => {
+    return(
+      <form className="profile-photo-uploader-form">
+        <label className="btn btn-secondary btn-sm" for="profile-photo-upload">{action} Image</label>
+        <input type="file" id="profile-photo-upload" accept="image/png,image/jpeg" onChange={this.handleUploadSubmit}/>
+      </form>
+    )
+  }
+  
+  
   memberSinceDate(){
     let date = new Date(this.props.user.created_at)
     let month = (date.getMonth() + 1).toString()
@@ -41,6 +61,21 @@ class Profile extends Component {
         <div id="profile-page-container">
           <div className="row" id="profile-title-container">
             <span id="profile-title"><p>{this.props.user.company_name}</p></span>
+          </div>
+          
+          <div className="row" id="profile-photo-container">
+            {
+              this.props.user.profile_photo.length > 0 ?
+              <img id="profile-photo" src={this.props.user.profile_photo}/> :
+              this.displayFileUploader("Upload")
+            }
+          </div>
+          
+          <div className="row" id="update-photo-container">
+            {
+              this.props.user.profile_photo.length > 0 ?
+              this.displayFileUploader("Update") : null
+            }
           </div>
           
           <div className="row" id="profile-details-container">

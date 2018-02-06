@@ -35,7 +35,10 @@
   }
 }
 
-
+.profile-photo-icon {
+  max-height: 40px;
+  border-radius: 20px;
+}
 
 #main-console-container {
   height: 100%;
@@ -73,6 +76,10 @@
   min-height: 100%;
   min-width: 25%;
   padding-left: 8px;
+}
+
+#startup-name {
+  padding-left: 10px;
 }
 
 .row-content > p {

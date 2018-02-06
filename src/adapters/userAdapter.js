@@ -33,6 +33,24 @@ class UserAdapter {
     .catch(error => { return error })
   }
   
+  static updateProfilePhoto(imageBase64) {
+    const authorizationToken = "Bearer " + sessionStorage.jwt
+    // const requestUrl = "https://stagingapi.yourfoundry.com/api/v1/profile/photo/update"
+    const requestUrl = "http://localhost:3000/api/v1/profile/photo/update"
+    const request = new Request(requestUrl, {
+      method: 'POST',
+      headers: new Headers({
+        'Content-Type': 'application/json',
+        'Authorization': authorizationToken
+      }),
+      body: JSON.stringify({imageBase64: imageBase64})
+    });
+
+    return fetch(request)
+    .then(response => { return response.json() })
+    .catch(error => { return error })
+  }
+  
 }
 
 export default UserAdapter;  
