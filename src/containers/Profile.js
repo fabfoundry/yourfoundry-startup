@@ -40,11 +40,13 @@ class Profile extends Component {
   handleUploadSubmit = (event) => {
     event.preventDefault()
     let reader = new FileReader();
-    reader.onloadend = () => {
-      this.updateUploadStatus(true)
-      this.props.actions.updateProfilePhoto(reader.result, this.updateUploadStatus)
+    if(document.getElementById("profile-photo-upload").files.length > 0){
+      reader.onloadend = () => {
+        this.updateUploadStatus(true)
+        this.props.actions.updateProfilePhoto(reader.result, this.updateUploadStatus)
+      }
+      reader.readAsDataURL(document.getElementById("profile-photo-upload").files[0])
     }
-    reader.readAsDataURL(document.getElementById("profile-photo-upload").files[0])
   }
   
   displayFileUploader = (action) => {
