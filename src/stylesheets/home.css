@@ -16,10 +16,10 @@ body {
     font-size: 0.5em;
   }
   
-  .nav-button {
+  /*.nav-button {
       height: 2.0em;
       width: 4.7em;
-  }
+  }*/
 }
 
 /* Small devices (landscape phones, 350px and up) */
@@ -36,10 +36,10 @@ body {
     font-size: 0.7em;
   }
   
-  .nav-button {
+  /*.nav-button {
     height: 2.2em;
     width: 5.0em;
-  }
+  }*/
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -56,10 +56,10 @@ body {
     font-size: 0.9em;
   }
   
-  .nav-button {
+  /*.nav-button {
     height: 2.0em;
     width: 4.7em;
-  }
+  }*/
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -76,10 +76,10 @@ body {
     font-size: 1.0em;
   }
   
-  .nav-button {
+  /*.nav-button {
     height: 2.3em;
     width: 5.0em;
-  }
+  }*/
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -96,10 +96,10 @@ body {
     font-size: 1.1em;
   }
   
-  .nav-button {
+  /*.nav-button {
     height: 2.5em;
     width: 5.5em;
-  }
+  }*/
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -116,10 +116,10 @@ body {
     font-size: 1.3em; /* 1.5x default size */
   } 
   
-  .nav-button {
+  /*.nav-button {
     height: 2.5em;
     width: 5.5em;
-  }
+  }*/
   
 }
 
