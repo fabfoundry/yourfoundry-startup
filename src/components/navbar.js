@@ -69,8 +69,12 @@ class Navbar extends Component {
                   <span className="navbar-toggler-icon"></span>
           </button>
           <a className="navbar-brand navbar-logo" href="/">YourFoundry</a>
+          
           <div className="collapse navbar-collapse collapsed-nav-container" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
+              <li>
+                <div id="google_translate_element"></div>
+              </li>
             </ul>
             {
               (!!sessionStorage.jwt || this.props.session === true) ?
