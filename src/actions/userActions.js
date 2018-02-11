@@ -22,9 +22,9 @@ export function createUser(credentials, setLoader, history) {
     .then(response => {
       if(response["request"] === "complete"){
         dispatch(sessionActions.logInUser({
-          email: credentials["email"], 
-          password: credentials["password"]}, 
-          setLoader, 
+          email: credentials["email"],
+          password: credentials["password"]},
+          setLoader,
           history
         ))
       }
@@ -54,9 +54,13 @@ export function updateProfilePhoto(imageBase64, updateUploadStatus) {
   return (dispatch) => {
     return userAdapter.updateProfilePhoto(imageBase64, updateUploadStatus)
     .then(response => {
+      if(!!response["error"]){
+        alert("Warning! File size must not exceed 5mb.")
+      }
+      else {
+        dispatch(fetchUserData())
+      }
       updateUploadStatus(false)
-      dispatch(fetchUserData())
     })
   };
 }
-

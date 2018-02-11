@@ -1,5 +1,5 @@
 class ProjectAdapter {
-  
+
   static index() {
     const authorizationToken = "Bearer " + sessionStorage.jwt
     const requestUrl = "https://stagingapi.yourfoundry.com/api/v1/projects"
@@ -16,7 +16,7 @@ class ProjectAdapter {
     .then(response => { return response.json() })
     .catch(error => { return error })
   }
-  
+
 
   static create(projectName) {
     const authorizationToken = "Bearer " + sessionStorage.jwt
@@ -35,7 +35,7 @@ class ProjectAdapter {
     .then(response => { return response.json() })
     .catch(error => { return error })
   }
-  
+
   static destroy(projectId) {
     const authorizationToken = "Bearer " + sessionStorage.jwt
     // let url = "http://localhost:3000/api/v1/projects/" + projectId
