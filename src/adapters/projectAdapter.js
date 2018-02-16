@@ -2,8 +2,12 @@ class ProjectAdapter {
 
   static index() {
     const authorizationToken = "Bearer " + sessionStorage.jwt
-    const requestUrl = "https://stagingapi.yourfoundry.com/api/v1/projects"
-    // const requestUrl = "http://localhost:3000/api/v1/projects"
+    if(window.location.href.includes("localhost")){
+      var requestUrl = "http://localhost:3000/api/v1/projects"
+    }
+    else{
+      var requestUrl = "https://stagingapi.yourfoundry.com/api/v1/projects"
+    }
     const request = new Request(requestUrl, {
       method: 'GET',
       headers: new Headers({
@@ -20,8 +24,13 @@ class ProjectAdapter {
 
   static create(projectName) {
     const authorizationToken = "Bearer " + sessionStorage.jwt
-    const request = new Request("https://stagingapi.yourfoundry.com/api/v1/projects", {
-    // const request = new Request("http://localhost:3000/api/v1/projects", {
+    if(window.location.href.includes("localhost")){
+      var requestUrl = "http://localhost:3000/api/v1/projects"
+    }
+    else{
+      var requestUrl = "https://stagingapi.yourfoundry.com/api/v1/projects"
+    }
+    const request = new Request(requestUrl, {
       method: 'POST',
       headers: new Headers({
         'Content-Type': 'application/json',
@@ -38,9 +47,13 @@ class ProjectAdapter {
 
   static destroy(projectId) {
     const authorizationToken = "Bearer " + sessionStorage.jwt
-    // let url = "http://localhost:3000/api/v1/projects/" + projectId
-    let url = "https://stagingapi.yourfoundry.com/api/v1/projects/" + projectId
-    const request = new Request(url, {
+    if(window.location.href.includes("localhost")){
+      var requestUrl = "http://localhost:3000/api/v1/projects/" + projectId
+    }
+    else{
+      var requestUrl = "https://stagingapi.yourfoundry.com/api/v1/projects/" + projectId
+    }
+    const request = new Request(requestUrl, {
       method: 'DELETE',
       headers: new Headers({
         'Content-Type': 'application/json',

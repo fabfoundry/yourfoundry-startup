@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
 class AddProjectModal extends Component {
-  
+
   constructor(){
     super();
     this.state = {
@@ -10,15 +10,15 @@ class AddProjectModal extends Component {
       errorMsg: false
     }
   }
-  
+
   showErrorMsg = () => {
     this.setState({errorMsg: true})
   }
-  
+
   handleProjectNameInput = (event) => {
     this.setState({projectName: event.target.value})
   }
-  
+
   handleAddClick = () => {
     if(this.state.projectName.length === 0){
       this.setState({errorMsg: true})
@@ -27,7 +27,7 @@ class AddProjectModal extends Component {
       this.props.createProject(this.state.projectName, this.showErrorMsg, this.props.hideAddProjectModal)
     )
   }
-  
+
   render(){
     return(
       <div className="static-modal">
@@ -37,8 +37,8 @@ class AddProjectModal extends Component {
           </Modal.Header>
 
           <Modal.Body>
-            <input id="new-project-name" 
-                   placeholder="Project Name..."
+            <input id="new-project-name"
+                   placeholder="(Project Name...)"
                    onChange={this.handleProjectNameInput}
                    value={this.state.projectName} />
           </Modal.Body>

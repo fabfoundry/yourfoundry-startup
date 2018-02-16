@@ -10,7 +10,7 @@ import * as projectActions from '../actions/projectActions';
 import '../stylesheets/console.css';
 
 class Console extends Component {
-  
+
   constructor(){
     super();
     this.state = {
@@ -19,32 +19,32 @@ class Console extends Component {
       selectedProject: null
     }
   }
-  
+
   componentDidMount(){
     this.props.actions.fetchUserData()
     this.props.actions.fetchAllUserProjects()
   }
-  
+
   displayAddProjectModal = () => {
     this.setState({displayAddProjectModal: true})
   }
-  
+
   hideAddProjectModal = () => {
     this.setState({displayAddProjectModal: false})
   }
-  
+
   displayDeleteProjectModal = () => {
     this.setState({displayDeleteProjectModal: true})
   }
-  
+
   hideDeleteProjectModal = () => {
     this.setState({displayDeleteProjectModal: false})
   }
-  
+
   setSelectedProject = (project) => {
     this.setState({selectedProject: project})
   }
-  
+
   displayLoader = () => {
       return(
         <Dimmer active>
@@ -52,13 +52,13 @@ class Console extends Component {
         </Dimmer>
       )
   }
-  
+
   displayProjects = () => {
     if(this.props.projects.length > 0){
       return this.props.projects.map((project) => {
-        return <Project key={project.id} 
-                        name={project.name} 
-                        displayDeleteProjectModal={this.displayDeleteProjectModal} 
+        return <Project key={project.id}
+                        name={project.name}
+                        displayDeleteProjectModal={this.displayDeleteProjectModal}
                         project={project}
                         setSelectedProject={this.setSelectedProject} />
       })
@@ -66,6 +66,7 @@ class Console extends Component {
   }
 
   render(){
+    console.log(this.state.selectedProject)
     return(
       <div className="container-fluid" id="main-console-container">
           <div className="row" id="main-console">
@@ -84,7 +85,7 @@ class Console extends Component {
                   </div>
                 </div>
                 {this.displayProjects()}
-                <div className="row row-container" 
+                <div className="row row-container"
                      id="add-new-project"
                      onClick={this.displayAddProjectModal}>
                   <div className="row-content">
@@ -94,20 +95,20 @@ class Console extends Component {
               </div>
             }
           </div>
-          { 
-            this.state.displayAddProjectModal ? 
-            <AddProjectModal 
+          {
+            this.state.displayAddProjectModal ?
+            <AddProjectModal
               hideAddProjectModal={this.hideAddProjectModal}
-              createProject={this.props.actions.createProject}/> 
-            : null 
+              createProject={this.props.actions.createProject}/>
+            : null
           }
-          { 
-            this.state.displayDeleteProjectModal ? 
+          {
+            this.state.displayDeleteProjectModal ?
             <DeleteProjectModal
               projectName={this.state.selectedProject["name"]}
               hideDeleteProjectModal={this.hideDeleteProjectModal}
-              deleteProject={() => this.props.actions.deleteProject(this.state.selectedProject["id"], this.hideDeleteProjectModal)}/> 
-            : null 
+              deleteProject={() => this.props.actions.deleteProject(this.state.selectedProject["id"], this.hideDeleteProjectModal)}/>
+            : null
           }
       </div>
     )
@@ -128,4 +129,3 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Console);
-

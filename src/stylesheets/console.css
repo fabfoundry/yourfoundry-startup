@@ -1,17 +1,17 @@
 /* Small devices (landscape phones, 250px and up) */
-@media (min-width: 250px) { 
+@media (min-width: 250px) {
   .row-content > p, .management-pending-complete {
     font-size: 1.0em;
   }
 }
 /* Small devices (landscape phones, 350px and up) */
-@media (min-width: 350px) { 
+@media (min-width: 350px) {
   .row-content > p, .management-pending-complete {
     font-size: 1.1em;
   }
 }
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
+@media (min-width: 576px) {
   .row-content > p, .management-pending-complete {
     font-size: 1.4em;
   }
@@ -142,7 +142,7 @@
 /* Modal */
 
 .modal {
-  background: #0000005c;
+  background: #0000008f;
 }
 
 .modal-dialog {
@@ -152,8 +152,9 @@
 
 .modal-content {
   border-radius: 0;
-  background: #000000e6;
-  border: 1px solid grey;
+  background: #16223594;
+  border: 1px solid #ffffff47;
+  box-shadow: 6px 6px #fff8f82e;
 }
 
 .modal-header {
@@ -170,7 +171,7 @@
 }
 
 .modal-footer > button {
-  font-weight: bold;
+  font-weight: 100;
 }
 
 .modal-footer > button:hover {
@@ -186,7 +187,7 @@
   border-right: 0;
   padding-left: 10px;
   font-size: 20px;
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid white;
   background: #00000000;
   color: white;
   text-align: center;
@@ -200,4 +201,3 @@
   font-weight: 200;
   text-align: center;
 }
-
