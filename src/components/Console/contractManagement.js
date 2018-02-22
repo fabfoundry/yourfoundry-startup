@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 
 class ContractManagement extends Component {
-  
+
   constructor(){
     super();
     this.state = {
       expanded: false
     }
   }
-  
+
   handleClick = () => {
     if(this.state.expanded){
       this.setState({expanded: false})
@@ -18,6 +18,7 @@ class ContractManagement extends Component {
     }
   }
 
+
   render(){
     return(
       <div className="row row-container contract-management">
@@ -26,7 +27,7 @@ class ContractManagement extends Component {
         </div>
         {
         this.state.expanded ?
-         <div className="row row-container contract-management"> 
+         <div className="row row-container contract-management expanded">
            <div className="row-content">
              <ul className="management-pending-complete">
                <li>+ Pending (0)</li>

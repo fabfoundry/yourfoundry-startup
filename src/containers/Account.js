@@ -12,6 +12,7 @@ class Account extends Component {
   }
 
   render(){
+    console.log(this.props.user)
     return(
       <div className="account-page">
         <Console />
@@ -21,7 +22,7 @@ class Account extends Component {
 }
 
 function mapStateToProps(state) {
-  return {session: state.session}
+  return {session: state.session, user: state.user}
 }
 
 export default connect(mapStateToProps)(Account);

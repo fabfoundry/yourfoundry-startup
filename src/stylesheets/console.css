@@ -136,6 +136,14 @@
   color: white;
   list-style-type: none;
   font-weight: 200;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+div.row.row-container.contract-management.expanded:hover {
+  cursor: pointer;
+  background: #6c6c6cde;
 }
 
 
@@ -154,7 +162,7 @@
   border-radius: 0;
   background: #16223594;
   border: 1px solid #ffffff47;
-  box-shadow: 6px 6px #fff8f82e;
+  box-shadow: 3px 3px 10px#fff8f82e;
 }
 
 .modal-header {
