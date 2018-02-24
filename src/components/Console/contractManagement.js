@@ -9,7 +9,7 @@ class ContractManagement extends Component {
     }
   }
 
-  handleClick = () => {
+  handleExpanderClick = () => {
     if(this.state.expanded){
       this.setState({expanded: false})
     }
@@ -18,16 +18,20 @@ class ContractManagement extends Component {
     }
   }
 
+  handleContractClick = () => {
+    this.props.history.push("/account/home/projects/" + this.props.projectId + "/contracts")
+  }
+
 
   render(){
     return(
       <div className="row row-container contract-management">
         <div className="row-content">
-          <p className="management-type" onClick={this.handleClick}>{this.state.expanded ? <span>-</span> : <span>+</span>} Contract Management (0)</p>
+          <p className="management-type" onClick={this.handleExpanderClick}>{this.state.expanded ? <span>-</span> : <span>+</span>} Contract Management (0)</p>
         </div>
         {
         this.state.expanded ?
-         <div className="row row-container contract-management expanded">
+         <div className="row row-container contract-management expanded" onClick={this.handleContractClick}>
            <div className="row-content">
              <ul className="management-pending-complete">
                <li>+ Pending (0)</li>

@@ -8,6 +8,7 @@ import Account from './containers/Account';
 import Profile from './containers/Profile';
 import Login from './containers/Login';
 import CreateAccount from './containers/CreateAccount';
+import Contracts from './containers/Contracts';
 
 
 export const Routes = () => {
@@ -18,6 +19,9 @@ export const Routes = () => {
         <Route path="/login" component={Login} />
         <Route path="/account/profile" component={(history) => (
             !!sessionStorage.jwt ? <Profile history={history.history} /> : <Redirect to="/login" />
+          )}  />
+        <Route path="/account/home/projects/:id/contracts" component={(history) => (
+            !!sessionStorage.jwt ? <Contracts history={history.history} /> : <Redirect to="/login" />
           )}  />
         <Route path="/account/home" component={(history) => (
             !!sessionStorage.jwt ? <Account history={history.history} /> : <Redirect to="/login" />

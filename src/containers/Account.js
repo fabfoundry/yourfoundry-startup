@@ -12,10 +12,9 @@ class Account extends Component {
   }
 
   render(){
-    console.log(this.props.user)
     return(
       <div className="account-page">
-        <Console />
+        <Console history={this.props.history}/>
       </div>
     )
   }

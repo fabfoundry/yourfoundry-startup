@@ -60,13 +60,13 @@ class Console extends Component {
                         name={project.name}
                         displayDeleteProjectModal={this.displayDeleteProjectModal}
                         project={project}
-                        setSelectedProject={this.setSelectedProject} />
+                        setSelectedProject={this.setSelectedProject}
+                        history={this.props.history}/>
       })
     }
   }
 
   render(){
-    console.log(this.state.selectedProject)
     return(
       <div className="container-fluid" id="main-console-container">
           <div className="row" id="main-console">
