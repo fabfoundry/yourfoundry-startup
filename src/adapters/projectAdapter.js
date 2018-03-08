@@ -27,7 +27,7 @@ class ProjectAdapter {
       var requestUrl = "http://localhost:3000/api/v1/projects/" + id
     }
     else{
-      var requestUrl = "https://stagingapi.yourfoundry.com/api/v1/projects" + id
+      var requestUrl = "https://stagingapi.yourfoundry.com/api/v1/projects/" + id
     }
     const request = new Request(requestUrl, {
       method: 'GET',
