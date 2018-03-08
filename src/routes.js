@@ -21,7 +21,7 @@ export const Routes = () => {
             !!sessionStorage.jwt ? <Profile history={history.history} /> : <Redirect to="/login" />
           )}  />
         <Route path="/account/home/projects/:id/contracts" component={(history) => (
-            !!sessionStorage.jwt ? <Contracts history={history.history} /> : <Redirect to="/login" />
+            !!sessionStorage.jwt ? <Contracts history={history.history} match={history.match}/> : <Redirect to="/login" />
           )}  />
         <Route path="/account/home" component={(history) => (
             !!sessionStorage.jwt ? <Account history={history.history} /> : <Redirect to="/login" />

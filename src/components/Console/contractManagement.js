@@ -19,7 +19,10 @@ class ContractManagement extends Component {
   }
 
   handleContractClick = () => {
-    this.props.history.push("/account/home/projects/" + this.props.projectId + "/contracts")
+    this.props.history.push({
+      pathname: "/account/home/projects/" + this.props.projectId + "/contracts",
+      project: this.props.project
+    })
   }
 
 

@@ -43,7 +43,7 @@ class Project extends Component {
           </div>
         </div>
         <div id="management-containers">
-          {this.state.expanded ? <ContractManagement projectId={this.props.project.id} history={this.props.history}/> : null}
+          {this.state.expanded ? <ContractManagement project={this.props.project} projectId={this.props.project.id} history={this.props.history}/> : null}
           {this.state.expanded ? <SupplierManagement /> : null}
           {this.state.expanded ? <PaymentManagement /> : null}
           {this.state.expanded ? <ProjectManagement /> : null}

@@ -47,8 +47,12 @@
   overflow: auto;
 }
 
+#nav-container {
+  height: 8%;
+}
+
 #main-console {
-  height: 75%;
+  height: 85%;
   width: 70%;
   background: black;
   margin: 0 auto;

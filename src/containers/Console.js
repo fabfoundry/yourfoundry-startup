@@ -69,6 +69,7 @@ class Console extends Component {
   render(){
     return(
       <div className="container-fluid" id="main-console-container">
+          <div className="row" id="nav-container"></div>
           <div className="row" id="main-console">
             {
               !this.props.user ? this.displayLoader() :

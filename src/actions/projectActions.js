@@ -1,9 +1,12 @@
 import * as types from './actionTypes';
 import projectAdapter from '../adapters/projectAdapter';
-// import * as userActions from './userActions';  
 
 export function fetchAllProjects(projects) {
   return {type: types.FETCH_ALL_PROJECTS, payload: projects}
+}
+
+export function fetchProject(project) {
+  return {type: types.FETCH_PROJECT, payload: project}
 }
 
 
@@ -11,11 +14,24 @@ export function fetchAllUserProjects() {
   return function(dispatch) {
     return projectAdapter.index()
     .then(response => {
-        dispatch(fetchAllProjects(response["projects"]))
+      dispatch(fetchAllProjects(response["projects"]))
     })
   };
 }
 
+export function showProject(id, history) {
+  return function(dispatch) {
+    return projectAdapter.show(id, history)
+    .then(response => {
+      if(response["project"]){
+        dispatch(fetchProject(response["project"]))
+      }
+      else{
+        history.push('/')
+      }
+    })
+  };
+}
 
 export function createProject(projectName, errorMsg, hideModal) {
   return function(dispatch) {
