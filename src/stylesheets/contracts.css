@@ -7,3 +7,15 @@
 #nav-container {
   height: 8%;
 }
+
+#contracts-title-container {
+  background: #474747;
+  border: none;
+}
+
+.child-row {
+  width: 100%;
+  margin: 5px auto;
+  background: #828282;
+  border: none;
+}

@@ -1,36 +1,36 @@
 /* Small devices (landscape phones, 250px and up) */
 @media (min-width: 250px) {
-  .row-content > p, .management-pending-complete {
+  .row-content > p, .row-list-items {
     font-size: 1.0em;
   }
 }
 /* Small devices (landscape phones, 350px and up) */
 @media (min-width: 350px) {
-  .row-content > p, .management-pending-complete {
+  .row-content > p, .row-list-items {
     font-size: 1.1em;
   }
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  .row-content > p, .management-pending-complete {
+  .row-content > p, .row-list-items {
     font-size: 1.4em;
   }
 }
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .row-content > p, .management-pending-complete {
+  .row-content > p, .row-list-items {
     font-size: 1.4em;
   }
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .row-content > p, .management-pending-complete {
+  .row-content > p, .row-list-items {
     font-size: 1.4em;
   }
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  .row-content > p, .management-pending-complete {
+  .row-content > p, .row-list-items {
     font-size: 1.4em;
   }
 }
@@ -111,14 +111,14 @@
   cursor: pointer;
 }
 
-.contract-management, .supplier-management, .payment-management, .project-management {
+.expandable-row {
   width: 100%;
   margin: 5px auto;
   background: #828282;
   border: none;
 }
 
-.management-type:hover {
+.row-label:hover {
   cursor: pointer;
 }
 
@@ -136,7 +136,7 @@
   cursor: pointer;
 }
 
-.management-pending-complete {
+.row-list-items {
   color: white;
   list-style-type: none;
   font-weight: 200;
@@ -145,7 +145,7 @@
   transform: translateY(-50%);
 }
 
-div.row.row-container.contract-management.expanded:hover {
+div.row.row-container.expandable-row.expanded:hover {
   cursor: pointer;
   background: #6c6c6cde;
 }
@@ -212,4 +212,19 @@ div.row.row-container.contract-management.expanded:hover {
 #new-project-name::placeholder {
   font-weight: 200;
   text-align: center;
+}
+
+
+
+.console-nav {
+  height: 5%;
+}
+
+.console-nav-item-active {
+  text-decoration: underline;
+}
+
+.console-nav-item:hover{
+  cursor: pointer;
+  text-decoration: underline;
 }

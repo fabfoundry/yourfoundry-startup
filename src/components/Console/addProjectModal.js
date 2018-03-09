@@ -33,7 +33,7 @@ class AddProjectModal extends Component {
       <div className="static-modal">
         <Modal.Dialog>
           <Modal.Header>
-            {this.state.errorMsg ? <p>Project name cannot already exist or be blank.</p> : null}
+            {this.state.errorMsg ? <p>Cannot already exist or be blank.</p> : null}
           </Modal.Header>
 
           <Modal.Body>

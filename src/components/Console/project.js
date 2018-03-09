@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
-import ContractManagement from './contractManagement';
-import SupplierManagement from './supplierManagement';
-import PaymentManagement from './paymentManagement';
-import ProjectManagement from './projectManagement';
+import ExpandableRow from '../RowComponents/ExpandableRow';
 import { Icon } from 'semantic-ui-react';
 import '../../stylesheets/project.css';
 
@@ -43,10 +40,10 @@ class Project extends Component {
           </div>
         </div>
         <div id="management-containers">
-          {this.state.expanded ? <ContractManagement project={this.props.project} projectId={this.props.project.id} history={this.props.history}/> : null}
-          {this.state.expanded ? <SupplierManagement /> : null}
-          {this.state.expanded ? <PaymentManagement /> : null}
-          {this.state.expanded ? <ProjectManagement /> : null}
+          {this.state.expanded ? <ExpandableRow history={this.props.history} projectId={this.props.project.id} type="contract" rowLabel="Contract Management (0)" listItems={["Pending (0)", "Complete (0)"]}/> : null}
+          {this.state.expanded ? <ExpandableRow history={this.props.history} projectId={this.props.project.id} type="supplier" rowLabel="Supplier Management (0)" listItems={["Pending (0)", "Complete (0)"]}/> : null}
+          {this.state.expanded ? <ExpandableRow history={this.props.history} projectId={this.props.project.id} type="payment" rowLabel="Payment Management (0)" listItems={["Pending (0)", "Complete (0)"]}/> : null}
+          {this.state.expanded ? <ExpandableRow history={this.props.history} projectId={this.props.project.id} type="project" rowLabel="Project Management (0)" listItems={["Pending (0)", "Complete (0)"]}/> : null}
         </div>
       </div>
     )
