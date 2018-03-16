@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
-class AddProjectModal extends Component {
+class AddModal extends Component {
 
   constructor(){
     super();
     this.state = {
-      projectName: "",
+      nameInput: "",
       errorMsg: false
     }
   }
@@ -15,16 +15,16 @@ class AddProjectModal extends Component {
     this.setState({errorMsg: true})
   }
 
-  handleProjectNameInput = (event) => {
-    this.setState({projectName: event.target.value})
+  handleNameInput = (event) => {
+    this.setState({nameInput: event.target.value})
   }
 
   handleAddClick = () => {
-    if(this.state.projectName.length === 0){
+    if(this.state.nameInput.length === 0){
       this.setState({errorMsg: true})
     }
-    else(
-      this.props.createProject(this.state.projectName, this.showErrorMsg, this.props.hideAddProjectModal)
+    else if(this.props.type === "project")(
+      this.props.createProject(this.state.nameInput, this.showErrorMsg, this.props.hideAddModal)
     )
   }
 
@@ -38,13 +38,13 @@ class AddProjectModal extends Component {
 
           <Modal.Body>
             <input id="new-project-name"
-                   placeholder="(Project Name...)"
-                   onChange={this.handleProjectNameInput}
-                   value={this.state.projectName} />
+                   placeholder={this.props.placeholder}
+                   onChange={this.handleNameInput}
+                   value={this.state.nameInput} />
           </Modal.Body>
 
           <Modal.Footer>
-            <Button type="button" className="btn btn-secondary" onClick={this.props.hideAddProjectModal}>Cancel</Button>
+            <Button type="button" className="btn btn-secondary" onClick={this.props.hideAddModal}>Cancel</Button>
             <Button type="button" className="btn btn-success" onClick={this.handleAddClick}>Add</Button>
           </Modal.Footer>
 
@@ -54,4 +54,4 @@ class AddProjectModal extends Component {
   }
 }
 
-export default AddProjectModal;
+export default AddModal;

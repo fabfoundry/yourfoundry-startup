@@ -3,7 +3,7 @@ import Project from '../components/Console/project';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import { Dimmer, Loader } from 'semantic-ui-react';
-import AddProjectModal from '../components/Console/addProjectModal';
+import AddModal from '../components/Console/addModal';
 import DeleteProjectModal from '../components/Console/deleteProjectModal';
 import * as userActions from '../actions/userActions';
 import * as projectActions from '../actions/projectActions';
@@ -14,7 +14,7 @@ class Console extends Component {
   constructor(){
     super();
     this.state = {
-      displayAddProjectModal: false,
+      displayAddModal: false,
       displayDeleteProjectModal: false,
       selectedProject: null
     }
@@ -25,12 +25,12 @@ class Console extends Component {
     this.props.actions.fetchAllUserProjects()
   }
 
-  displayAddProjectModal = () => {
-    this.setState({displayAddProjectModal: true})
+  displayAddModal = () => {
+    this.setState({displayAddModal: true})
   }
 
-  hideAddProjectModal = () => {
-    this.setState({displayAddProjectModal: false})
+  hideAddModal = () => {
+    this.setState({displayAddModal: false})
   }
 
   displayDeleteProjectModal = () => {
@@ -88,7 +88,7 @@ class Console extends Component {
                 {this.displayProjects()}
                 <div className="row row-container"
                      id="add-new-project"
-                     onClick={this.displayAddProjectModal}>
+                     onClick={this.displayAddModal}>
                   <div className="row-content">
                     <p>Add a new project</p>
                   </div>
@@ -97,10 +97,12 @@ class Console extends Component {
             }
           </div>
           {
-            this.state.displayAddProjectModal ?
-            <AddProjectModal
-              hideAddProjectModal={this.hideAddProjectModal}
-              createProject={this.props.actions.createProject}/>
+            this.state.displayAddModal ?
+            <AddModal
+              hideAddModal={this.hideAddModal}
+              createProject={this.props.actions.createProject}
+              type={"project"}
+              placeholder={"(Project Name...)"}/>
             : null
           }
           {

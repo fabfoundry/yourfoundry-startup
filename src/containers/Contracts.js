@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import * as userActions from '../actions/userActions';
 import * as projectActions from '../actions/projectActions';
+import AddModal from '../components/Console/addModal';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import { Dimmer, Loader } from 'semantic-ui-react';
@@ -9,9 +10,24 @@ import '../stylesheets/contracts.css';
 
 class Contracts extends Component {
 
+  constructor(){
+    super();
+    this.state = {
+      displayAddModal: false,
+    }
+  }
+
   componentDidMount(){
     this.props.actions.fetchUserData()
     this.props.actions.showProject(this.props.match.params.id, this.props.history)
+  }
+
+  displayAddModal = () => {
+    this.setState({displayAddModal: true})
+  }
+
+  hideAddModal = () => {
+    this.setState({displayAddModal: false})
   }
 
   displayLoader = () => {
@@ -62,10 +78,23 @@ class Contracts extends Component {
                 </div>
                 <ExpandableRow rowLabel="Pending (0)" listItems={[]}/>
                 <ExpandableRow rowLabel="Complete (0)" listItems={[]}/>
+                <div className="row row-container" id="add-new-contract" onClick={this.displayAddModal}>
+                  <div className="row-content">
+                    <p>Add a contract...</p>
+                  </div>
+                </div>
               </div>
            </div> : this.displayLoader()
         }
-
+        {
+          this.state.displayAddModal ?
+          <AddModal
+            hideAddModal={this.hideAddModal}
+            createProject={this.props.actions.createProject}
+            type={"contract"}
+            placeholder={"(Contract Name...)"}/>
+          : null
+        }
       </div>
     )
   }

@@ -94,18 +94,16 @@
   transform: translateY(-50%);
 }
 
-#add-new-project, #project {
+#add-new-project, #add-new-contract, #project {
   background: #474747;
   border: none;
 }
 
-#add-new-project:hover, #project:hover {
+#add-new-project:hover, #add-new-contract:hover, #project:hover {
   background: #474747de;
-}
-
-#add-new-project:hover {
   cursor: pointer;
 }
+
 
 #project-name:hover {
   cursor: pointer;
